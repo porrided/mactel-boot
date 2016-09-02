@@ -8,7 +8,7 @@ hfs-bless: bless.c
 	$(CC) -g -o hfs-bless bless.c
 
 SystemVersion.plist: SystemVersion.plist.in
-	sed "s/PRODUCTVERSION/$(PRODUCTVERSION)/" SystemVersion.plist.in >SystemVersion.plist
+	sed "s<PRODUCTVERSION<$(PRODUCTVERSION)<" SystemVersion.plist.in >SystemVersion.plist
 
 clean:
 	rm hfs-bless SystemVersion.plist
